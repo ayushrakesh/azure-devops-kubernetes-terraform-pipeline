@@ -1,0 +1,22 @@
+trigger:
+  - main
+
+pr: 
+  - "*"
+
+jobs:
+  - job: Linux
+    displayName: 'Run on Linux'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - script: echo 'Job-Linux'
+        displayName: 'Run a one-line script on Linux'
+
+  - job: MacOS
+    displayName: 'Run on macOS'
+    pool:
+      vmImage: 'macos-latest'
+    steps:
+      - script: echo 'Job-Macos'
+        displayName: 'Run a one-line script on macOS'
