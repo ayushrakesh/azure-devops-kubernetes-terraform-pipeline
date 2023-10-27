@@ -28,8 +28,8 @@ stages:
             inputs:
               SourceFolder: '$(System.DefaultWorkingDirectory)'
               Contents: |
-                '**/*.yaml'
-                '**/*.tf'
+                **/*.yaml
+                **/*.tf
               TargetFolder: '$(Build.ArtifactStagingDirectory)'
           - bash: ls -R $(Build.ArtifactStagingDirectory)    
       # - job: SecondJob
